@@ -19,6 +19,7 @@ const AddProduct = (props) => {
   const [marketID, setMarketID] = useState(markets[0].id);
   const [categoryID, setCategoryID] = useState(categories[0].id);
   const [productName, setProductName] = useState("");
+  //burdaki usestateler değişecek
   const [filterShop, setFilterShop] = useState(markets[0].id);
   const [filterCategory, setFilterCategory] = useState(categories[0].id);
   const [filterIsbought, setFilterisbought] = useState(null);
@@ -53,6 +54,7 @@ const AddProduct = (props) => {
 
   });
 */
+// filtrele kısmı sorunlu çözemedim
   return (
     <>
       <h2>EKLE</h2>
