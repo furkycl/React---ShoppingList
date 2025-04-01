@@ -1,7 +1,8 @@
 import Table from "react-bootstrap/Table";
 import TableCheckedRow from "./TableCheckedRow";
 import { useEffect, useState } from "react";
-import JSConfetti from 'js-confetti'
+import JSConfetti from "js-confetti";
+import AddProduct from "./AddProduct";
 
 const ProductsTable = (props) => {
   const products = props.products;
@@ -10,19 +11,21 @@ const ProductsTable = (props) => {
   const onDelete = props.onDelete;
   const [basket, setBasket] = useState([]);
   const [oldBasketLength, setOldBasketLength] = useState(basket.length);
-  const jsConfetti = new JSConfetti()
+  const jsConfetti = new JSConfetti();
   useEffect(() => {
     if (
       products.length === basket.length &&
       products.length > 0 &&
       oldBasketLength < basket.length
     ) {
-        jsConfetti.addConfetti()
+      jsConfetti.addConfetti();
     }
   }, [products, basket, oldBasketLength]);
+  
 
   return (
     <div>
+      <h2>Listele</h2>
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
